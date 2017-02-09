@@ -1,0 +1,6 @@
+{
+    "include": [
+        "src/**/*.js"
+    ],
+    "reporter": [ "text", "lcov", "json-summary" ]
+}

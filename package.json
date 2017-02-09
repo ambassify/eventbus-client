@@ -1,0 +1,29 @@
+{
+  "name": "eventbus-client",
+  "version": "0.1.0",
+  "description": "EventBus",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm -s run test:lint && npm -s run test:unit",
+    "test:lint": "eslint src",
+    "test:unit": "nyc mocha"
+  },
+  "keywords": [
+    "eventbus"
+  ],
+  "author": "Ambassify <dev@ambassify.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "mocha": "^3.2.0",
+    "mocha-circleci-reporter": "0.0.2",
+    "nock": "^9.0.4",
+    "nyc": "^10.1.2",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "mitt": "^1.0.1",
+    "node-fetch": "^1.6.3"
+  }
+}
