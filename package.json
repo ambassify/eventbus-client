@@ -1,6 +1,6 @@
 {
   "name": "@ambassify/eventbus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "EventBus",
   "main": "src/index.js",
   "scripts": {
