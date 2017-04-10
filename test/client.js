@@ -37,8 +37,11 @@ describe('#eventbus', function() {
 
         const eventbus = new EventBus({
             endpoint: 'http://fake-eventbus.ambassify.eu/eventbus/',
-            timeout: 10
+            timeout: 10,
+            accessToken: '123'
         });
+
+        eventbus.on('error', err => console.log(err));
 
         eventbus.send('event_created', {
             'hello': 'world'
@@ -64,7 +67,8 @@ describe('#eventbus', function() {
 
         const eventbus = new EventBus({
             endpoint: 'http://fake-eventbus.ambassify.eu/eventbus/',
-            timeout: 10
+            timeout: 10,
+            accessToken: '123'
         });
 
         eventbus.send('event_created', { 'hello': 'world' });
@@ -107,7 +111,8 @@ describe('#eventbus', function() {
             .reply(403, {});
 
         const eventbus = new EventBus({
-            endpoint: 'http://fake-eventbus.ambassify.eu/eventbus/'
+            endpoint: 'http://fake-eventbus.ambassify.eu/eventbus/',
+            accessToken: '123'
         });
 
         // Set it later on to mark constructor branch as used.
