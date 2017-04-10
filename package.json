@@ -1,6 +1,6 @@
 {
-  "name": "eventbus-client",
-  "version": "0.1.0",
+  "name": "@ambassify/eventbus",
+  "version": "1.0.0",
   "description": "EventBus",
   "main": "src/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "sinon": "^1.17.7"
   },
   "dependencies": {
+    "jsonwebtoken": "^7.3.0",
     "lodash": "^4.17.4",
     "mitt": "^1.0.1",
     "node-fetch": "^1.6.3"

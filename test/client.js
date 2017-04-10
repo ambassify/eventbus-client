@@ -3,7 +3,7 @@ const nock = require('nock');
 
 describe('#eventbus', function() {
 
-    const EventBus = require('..');
+    const EventBus = require('../src/client');
 
     function printNoMatch(req, res) {
         console.log(`Unexpected request received ${res.method}: ${res.url}`);
