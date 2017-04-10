@@ -21,15 +21,22 @@ function EventBusClient(options = {}) {
 EventBusClient.prototype = {
 
     send(eventName, payload, options = {}) {
+        const accessToken = options.accessToken || this.accessToken;
+        if (!accessToken) {
+            this.emit('error', new Error('No accessToken set'));
+            return this;
+        }
+
         const data = _pick(options, 'orgId', 'userId', 'id', 'type');
         data.payload = payload;
+
 
         if (!this._events[eventName])
             this._events[eventName] = [];
 
         this._events[eventName].push({
             eventName: eventName,
-            accessToken: options.accessToken || this.accessToken,
+            accessToken: accessToken,
             data: data
         });
 
