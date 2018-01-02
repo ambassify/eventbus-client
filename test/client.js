@@ -119,8 +119,10 @@ describe('#eventbus', function() {
         eventbus.timeout = 10;
 
         eventbus.on('error', function(err) {
-            assert.equal(err.message, 'Failed to push event data');
-            done();
+            try {
+                assert.equal(err.message, 'Failed to push event data');
+                done();
+            } catch(e) { done(e); }
         });
 
         eventbus.send('event_created', { 'hello': 'world' });
