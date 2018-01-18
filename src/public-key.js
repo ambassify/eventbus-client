@@ -1,5 +1,5 @@
 const URL = require('url');
-const fetch = require('node-fetch');
+const fetch = require('@ambassify/fetch');
 
 const CACHE = {};
 const MAX_AGE = 300 * 1000;

@@ -22,9 +22,9 @@
     "sinon": "^1.17.7"
   },
   "dependencies": {
+    "@ambassify/fetch": "^1.0.1",
     "jsonwebtoken": "^7.3.0",
     "lodash": "^4.17.4",
-    "mitt": "^1.0.1",
-    "node-fetch": "^1.6.3"
+    "mitt": "^1.0.1"
   }
 }

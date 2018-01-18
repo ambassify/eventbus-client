@@ -1,5 +1,5 @@
 const _pick = require('lodash/pick');
-const fetch = require('node-fetch');
+const fetch = require('@ambassify/fetch');
 const mitt = require('mitt'); // 200kb event emitter
 const URL = require('url');
 
@@ -85,8 +85,12 @@ EventBusClient.prototype = {
             }
         };
 
-        if (data.accessToken)
-            opts.headers['Authorization'] = `BuboBox ${data.accessToken}`;
+        if (data.accessToken) {
+            opts.headers['Authorization'] = `Bearer ${data.accessToken}`;
+
+            // Legacy tokens
+            opts.headers['X-API-KEY'] = data.accessToken;
+        }
 
         fetch(url, opts)
             .then(res => {
