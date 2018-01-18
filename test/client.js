@@ -83,7 +83,10 @@ describe('#eventbus', function() {
 
     it('Should append header passed through options', function() {
         const request = nock('http://fake-eventbus.ambassify.eu', {
-                reqheaders: { 'authorization': 'BuboBox 2222' }
+                reqheaders: {
+                    'authorization': 'Bearer 2222',
+                    'x-api-key': '2222'
+                }
             })
             .post('/eventbus/event/event_created', {
                 payload: { 'hello': 'world' }
