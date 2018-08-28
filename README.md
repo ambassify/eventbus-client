@@ -1,3 +1,7 @@
+# Deprecated!
+
+Use [https://github.com/ambassify/api-clients](https://github.com/ambassify/api-clients) instead.
+
 # EventBus-client
 
 A client to publish events to `eventbus`.
